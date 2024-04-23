@@ -103,7 +103,7 @@ function handleStart(type) {
   console.log('🌸🌸🌸 / type: ', type)
   switch (type) {
     case 'ChatGPT':
-      if (env.OPENAI_API_KEY) return botStart()
+      if (process.env.OPENAI_API_KEY) return botStart()
       console.log('❌ 请先配置.env文件中的 OPENAI_API_KEY')
       break
     case 'Kimi':
@@ -136,13 +136,14 @@ const questions = [
   },
 ]
 function init() {
-  inquirer
-    .prompt(questions)
-    .then((res) => {
-      handleStart(res.serviceType)
-    })
-    .catch((error) => {
-      console.log('🚀error:', error)
-    })
+  // inquirer
+  //   .prompt(questions)
+  //   .then((res) => {
+  //     handleStart(res.serviceType)
+  //   })
+  //   .catch((error) => {
+  //     console.log('🚀error:', error)
+  //   })
+  handleStart('ChatGPT')
 }
 init()

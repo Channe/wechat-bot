@@ -10,7 +10,7 @@ async function handleRequest(type) {
   console.log('type: ', type)
   switch (type) {
     case 'ChatGPT':
-      if (env.OPENAI_API_KEY) {
+      if (process.env.OPENAI_API_KEY) {
         const message = await getGptReply("hello")
         console.log('🌸🌸🌸 / reply: ', message)
         return
