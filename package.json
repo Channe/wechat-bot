@@ -10,8 +10,7 @@
     "test": "node ./src/wechaty/testMessage.js",
     "test-openai": "node ./src/openai/__test__.js",
     "test-xunfei": "node ./src/xunfei/__test__.js",
-    "test-kimi": "node ./src/kimi/__test__.js",
-    "vercel-build": "echo 'No build required'"
+    "test-kimi": "node ./src/kimi/__test__.js"
   },
   "author": "rongding",
   "license": "ISC",
