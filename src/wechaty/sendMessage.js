@@ -67,6 +67,7 @@ export async function shardingMessage(message, bot) {
   let realText = splitMessage(text)
   // 如果是群聊但不是指定艾特人那么就不进行发送消息
   if (text.indexOf(`${botName}`) === -1) {
+    // TODO: Andy 按照日期将消息存储到文件
     return
   }
   realText = text.replace(`${botName}`, '')

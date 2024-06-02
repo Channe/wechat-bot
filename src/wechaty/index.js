@@ -116,6 +116,10 @@ function handleStart(type) {
       }
       console.log('❌ 请先配置.env文件中的 XUNFEI_APP_ID，XUNFEI_API_KEY，XUNFEI_API_SECRET')
       break
+    case 'Coze':
+      if (env.COZE_API_KEY) { return botStart() }
+      console.log('❌ 请先配置.env文件中的 COZE_API_KEY，COZE_BOT_ID')
+      break
     default:
       console.log('🚀服务类型错误')
   }
@@ -125,6 +129,7 @@ const serveList = [
   { name: 'ChatGPT', value: 'ChatGPT' },
   { name: 'Kimi', value: 'Kimi' },
   { name: 'Xunfei', value: 'Xunfei' },
+  { name: 'Coze', value: 'Coze'}
   // ... 欢迎大家接入更多的服务
 ]
 const questions = [
@@ -144,6 +149,11 @@ function init() {
   //   .catch((error) => {
   //     console.log('🚀error:', error)
   //   })
-  handleStart('ChatGPT')
+
+  // // 直接使用 ChatGPT
+  // handleStart('ChatGPT')
+
+  // 直接使用 Coze
+  handleStart('Coze')
 }
 init()

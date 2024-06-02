@@ -33,6 +33,14 @@ async function handleRequest(type) {
       }
       console.log('❌ 请先配置.env文件中的 XUNFEI_APP_ID，XUNFEI_API_KEY，XUNFEI_API_SECRET')
       break
+      case 'Coze':
+        if (process.env.COZE_API_KEY) {
+          const message = await getCozeReply("hello")
+          console.log('🌸🌸🌸 / reply: ', message)
+          return
+        }
+        console.log('❌ 请先配置.env文件中的 COZE_API_KEY')
+        break
     default:
       console.log('🚀服务类型错误')
   }
@@ -42,6 +50,7 @@ const serveList = [
   { name: 'ChatGPT', value: 'ChatGPT' },
   { name: 'Kimi', value: 'Kimi' },
   { name: 'Xunfei', value: 'Xunfei' },
+  { name: 'Coze', value: 'Coze' }
   // ... 欢迎大家接入更多的服务
 ]
 const questions = [
