@@ -11,7 +11,7 @@ export async function getCozeReply(content) {
   // 调用 Coze 的接口
   try {
     const response = await axios.post('https://api.coze.com/open_api/v2/chat', {
-      conversation_id: "123",
+      conversation_id: "1525",
       bot_id: `${env.COZE_BOT_ID}`,
       user: "andy1000d",
       query: content,

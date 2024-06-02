@@ -8,6 +8,12 @@
 
 ## 近期的改动
 
+### 2024.06.02
+
+新增Coze API，去这里申请一个 key：[Coze API](https://www.coze.com/open/api)。
+
+本仓库默认使用 Coze API，大家也可以自行申请一个 key，然后修改 config.js 中的 key 即可。
+
 ### 2024.04.08
 
 新增科大讯飞，去这里申请一个 key：[科大讯飞](https://console.xfyun.cn/services/bm35)，每个模型都有 200 万的免费 token ，感觉很难用完。
